@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="minimum-scale=1,initial-scale=1,width=device-width,shrink-to-fit=no"/>
+  <title>Progressbar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./solutionSteps.js" defer></script>
+  <script src="./index.js" defer></script>
+</head>
+
+<body>
+  <div id = controls>
+    <div>
+      <select id="puzzles-select">    
+        <option value="">--Выберите доску--</option>
+      </select><br>
+      <input type="text" placeholder="puzzle" id="puzzle">
+      <button id="load">Загрузить</button>
+      <br>
+      <div>
+        <input type="range" id="speed" name="speed"
+               min="0" max="100" value="78"><br>
+        <label for="speed" id="speedLabel">Скорость</label>
+      </div>      <br>
+    </div>
+    <button id="solve">Базовый алгоритм</button>
+    <button id="solve2">Проверка горизонтали и вертикали</button>
+    <button id="solve3">Проверка горизонтали, вертикали и квадрата</button>
+    <button id="refresh">Очистить</button>
+    <div id="tries" class="stat">Проверок:</div>
+    <div id="hits" class="stat">Отгадано:</div>
+  </div>
+  <div id="container"></div>
+</body>
+</html>

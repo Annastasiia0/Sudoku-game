@@ -1,0 +1,93 @@
+:root{
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+}
+html {
+  height: 100%;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+#controls input, #controls button, #controls select {
+  margin: 5px;
+  font-size: 1em;
+}
+
+
+
+
+
+
+#controls div {
+  color: black;
+}
+
+#speed {
+  margin: 5px;
+  width: 300px;
+  color: black;
+}
+
+#speedLabel {
+  font-size: 0.8em;
+  margin-left: 5px;
+  margin-right: auto;
+  justify-self: center;
+}
+
+.stat {
+  margin-left: 5px;
+}
+
+#container {
+  /* margin-left: auto;
+  margin-right: auto; */
+  display: grid;
+  width: 550px;
+  height: 550px; 
+  grid-gap: 0.0em;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+  height: 55px;
+  line-height: 55px;
+  width: 55px;
+  padding: 0.1em;
+  border: 1px solid #ddd;
+  text-align: center;
+  transition: all 300ms linear;
+  user-select: none;
+  
+}
+
+.grid-item-left {
+  border-left: 1px solid rgb(0, 0, 0);
+}
+
+.grid-item-right {
+  border-right: 1px solid black;
+}
+
+.grid-item-top {
+  border-top: 1px solid black;
+}
+
+.grid-item-bottom {
+  border-bottom: 1px solid black;
+}
